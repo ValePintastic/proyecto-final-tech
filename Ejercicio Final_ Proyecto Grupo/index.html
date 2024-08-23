@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de arte</title>
+    <meta name="autor" content="VGA">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Link Bootstrap 5.3.3-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <!--Barra Navegación Bootstrap-->
+    <nav class="navbar navbar-expand-md navbar-bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!--Logo-->
+          <a class="navbar-brand" href="index.html">
+            <img src="imagenes/logo.jpeg" width="50" alt="Logo Principal">
+            Pintastic Arte
+          </a>
+
+          <!--Pestañas Navegación-->
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Quien soy</a></li>
+            <li class="nav-item">
+              <!-- Botón para abrir el modal del carrito -->
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">Mi carrito <i class="bi bi-cart4"></i></a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contactame.html">Contáctame</a></li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--Sección Principal-->
+  <section class="principal align-items-lg-strech">
+    <div class="principal-primero d-flex flex-column justify-content-center align-items-center">
+        <img class="principal-imagen-desarrollador rounded-circle" src="imagenes/fotomia.jpeg" alt="Imagen_Personaje">
+        <h1>Hola, soy Valery Galeano</h1>
+        <h2>Creadora y artista de @Pintastic_Arte</h2>
+        <h2>Estilo => Cubismo Con Pop Art</h2>
+
+    </div>
+  </section>
+
+  <!--Carrusel que pasa automáticamente-->
+  <section>
+    <h6>👇 Pinturas Personalizadas Por Encargo 👇</h6>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000"><img src="fotos/pintura grande gatito.jpeg" class="d-block w-100" alt="Obra1"></div>
+        <div class="carousel-item" data-bs-interval="4000"><img src="fotos/ultima pintura.jpeg" class="d-block w-100" alt="Obra2"></div>
+        <div class="carousel-item" data-bs-interval="4000"><img src="fotos/perritos.jpeg" class="d-block w-100" alt="Obra3"></div>
+        <div class="carousel-item" data-bs-interval="4000"><img src="fotos/familia.jpeg" class="d-block w-100" alt="Obra4"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!--Obras Disponibles-->
+  <section class="experiencia section-clara">
+    <div class="container">
+      <div class="row">
+        <div class="columna col-12 col-md-12">
+          <p class="experiencia-titulo"><h6>OBRAS DISPONIBLES</h6></p>
+          <div class="badge-container">
+            <a href="#Producto1_Gatalisa"><span class="badge bg-light text-dark">Gatalisa</span></a>
+            <a href="#Producto2_Flores"><span class="badge bg-light text-dark">Flores</span></a>
+            <a href="#Producto3_Mujer_Perla"><span class="badge bg-light text-dark">Mujer de la Perla</span></a>
+            <a href="#Producto4_Pareja"><span class="badge bg-light text-dark">Pareja de Baile</span></a>
+            <a href="#Producto5_Pecera"><span class="badge bg-light text-dark">Pecera</span></a>
+            <a href="#Producto6_Perro"><span class="badge bg-light text-dark">Perro</span></a>
+            <a href="#Producto7_Gato"><span class="badge bg-light text-dark">Gato</span></a>
+            <a href="#Producto8_Gato_con_botas"><span class="badge bg-light text-dark">Gato con botas</span></a>
+            <a href="#Producto9_Gato_realeza"><span class="badge bg-light text-dark">Gato de la Realeza</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Imágenes de obras + botón carrito-->
+  <!-- Se utiliza modal para añadir al carrito en el header, y se crea DATA-NAME y DATA-PRICE, asociadas al botón, como variables para no afectar el estilo de que la información de la obra aparezca encima de la imagen al pasar el cursor-->
+   
+  <section class="experiencia2 section-clara">
+    <div class="container">
+      <div class="row">
+
+        <!-- 1- Gatalisa--> 
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto1_Gatalisa" src="fotos/gatalisa.jpeg" class="card-img-top" alt="Producto1_Gatalisa">
+              <div class="img-overlay">
+                <p>Alto: 60cm, Ancho: 50cm</p>
+                <p>Precio: $450.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Gatalisa</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="Gatalisa" data-price="450000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2- Flores--> 
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto2_Flores" src="fotos/flores.jpeg" class="card-img-top" alt="Producto2_Flores">
+              <div class="img-overlay">
+                <p>Alto: 70cm, Ancho: 50cm</p>
+                <p>Precio: $550.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Flores en Mano</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="Flores en Mano" data-price="550000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 - Mujer de la Perla--> 
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto3_Mujer_Perla" src="fotos/la mujer de la perla.jpeg" class="card-img-top" alt="Producto3_Mujer_Perla">
+              <div class="img-overlay">
+                <p>Alto: 60cm, Ancho: 50cm</p>
+                <p>Precio: $450.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">La Mujer De La Perla</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="La Mujer De La Perla" data-price="450000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 - Pareja de Baile--> 
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto4_Pareja" src="fotos/pareja.jpeg" class="card-img-top" alt="Producto4_Pareja">
+              <div class="img-overlay">
+                <p>Alto: 80cm, Ancho: 70cm</p>
+                <p>Precio: $600.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Pareja de Baile</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="Pareja de Baile" data-price="600000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 - Pecera-->
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto5_Pecera" src="fotos/pecera.jpeg" class="card-img-top" alt="Producto5_Pecera">
+              <div class="img-overlay">
+                <p>Alto: 50cm, Ancho: 50cm</p>
+                <p>Precio: $300.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Pecera</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="Pecera" data-price="300000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 - Perro-->
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto6_Perro" src="fotos/perro.jpeg" class="card-img-top" alt="Producto6_Perro">
+              <div class="img-overlay">
+                <p>Alto: 50cm, Ancho: 50cm</p>
+                <p>Precio: $300.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Perro con Traje Azul</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="Perro con Traje Azul" data-price="300000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 - Gato-->
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto7_Gato" src="fotos/gato.jpeg" class="card-img-top" alt="Producto7_Gato">
+              <div class="img-overlay">
+                <p>Alto: 50cm, Ancho: 50cm</p>
+                <p>Precio: $300.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Gato Sentado</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="Gato Sentado" data-price="300000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 - Gata con botas-->
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto8_Gato_con_botas" src="fotos/gata con botas.jpeg" class="card-img-top" alt="Producto8_Gato_con_botas">
+              <div class="img-overlay">
+                <p>Alto: 50cm, Ancho: 50cm</p>
+                <p>Precio: $300.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Gato con Botas</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="Gato con Botas" data-price="300000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 - Gata realeza-->
+        <div class="columna col-12 col-md-4">
+          <div class="card" style="width: 20rem;">
+            <div class="img-container">
+              <img id="Producto9_Gato_realeza" src="fotos/Gato de la realeza.jpg" class="card-img-top" alt="Producto9_Gato_realeza">
+              <div class="img-overlay">
+                <p>Alto: 50cm, Ancho: 50cm</p>
+                <p>Precio: $300.000</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Gato de la Realeza</h3>
+              <!-- Botón para añadir al carrito -->
+              <a href="#" class="btn btn-primary add-to-cart" data-name="Gato de la Realeza" data-price="300000">Añadir al carrito <i class="bi bi-cart4"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- Modal del carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <!-- Contenedor del modal -->
+  <div class="modal-dialog modal-dialog-centered">
+    <!-- Contenido del modal -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Mi carrito</h5>
+        <!-- Botón para cerrar el modal (X) -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Cuerpo del modal -->
+      <div class="modal-body">
+        <!-- Lista de productos en el carrito -->
+        <ul id="cartItems" class="list-group mb-3">
+        </ul>
+        <!-- Contenedor para mostrar el total del carrito -->
+        <div class="d-flex justify-content-between">
+          <strong>Total:</strong>
+          <span id="cartTotal">$0</span> <!-- Muestra el total del carrito -->
+        </div>
+      </div>
+      <!-- Footer del modal -->
+      <div class="modal-footer">
+        <!-- Botón para cerrar el modal -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <!-- Botón para finalizar la compra -->
+        <button type="button" class="btn btn-primary" id="checkoutBtn">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <img src="fotos/para footer.jpg" class="card-img-top" alt="..." height="220">
+    <section class="d-flex justify-content-center justify-content-center p-3 border-bottom">
+      <div class="me-5 d-none d-lg-block">
+        <span><h5>PARA OBRAS PERSONALIZADAS CONTÁCTAME A MIS REDES SOCIALES</h5></span>
+      </div>
+
+      <!-- Redes -->
+      <div>
+        <a href="https://www.facebook.com/profile.php?id=61560216051542" class="me-4 text-reset"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.facebook.com/messages/t/316620978201978" class="me-4 text-reset"><i class="bi bi-twitter-x"></i></a>
+        <a href="" class="me-4 text-reset"><i class="bi bi-google"></i></a>
+        <a href="https://www.instagram.com/pintastic_arte" class="me-4 text-reset"><i class="bi bi-instagram"></i></a>
+        <a href="" class="me-4 text-reset"><i class="bi bi-linkedin"></i></a>
+        <a href="" class="me-4 text-reset"><i class="bi bi-github"></i></a>
+      </div>
+    </section>
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-2">
+        <!-- Grid row -->
+        <div class="row mt-1">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto">
+            <h4 class="text-uppercase fw-bold mb-4">Valery Galeano</h6>
+            <p>Gracias por visitar mi pagina</p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <p><i class="bi bi-house-fill me-3"></i> Colombia</p>
+            <p><i class="bi bi-envelope me-3"></i>info@gmail.com</p>
+            <p><i class="bi bi-phone me-3"></i> + 57 234 567 88</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright
+    </div>
+
+  </footer>
+
+  <!-- Script Bootstrap 5.3.3 -->
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script Propio -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Mejoras adicionales
+Una vez que tengas el carrito básico funcionando, puedes agregar más funcionalidades como:
+
+- Remover productos del carrito.
+- Guardar el carrito en el almacenamiento local del navegador para mantenerlo entre sesiones.
+- Validación de la cantidad de productos en stock.
+- Integración con una API para obtener productos dinámicamente.
+
+
+Estos pasos te proporcionan una base sólida para empezar con un carrito de compras básico. 
+
+A partir de aquí, puedes continuar expandiendo y mejorando tu proyecto según tus necesidades.

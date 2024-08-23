@@ -1,0 +1,380 @@
+/* Importar iconos Bootstrap*/
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* Estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat', cursive; /* Se aplica la fuente Caveat a todos los elementos */
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Títulos */
+h1{
+    font-size: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 40px;
+    color:rgb(92, 186, 199);
+    font-family: "Caveat", cursive;
+    padding: 5px;
+}
+
+h5{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+h6{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color:rgb(92, 186, 199);
+    font-family: "Caveat", cursive;
+    padding: 1rem;
+}
+
+/* Temáticas Oscuras */
+.section.oscura{
+    color: white;
+    background-color: black;
+}
+/* Temáticas Claras */
+.section.clara{
+    color: black;
+    background-color: white;
+}
+
+.section.titulo{
+    font-size: 2rem;
+    padding: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.text-negro{
+    color: black;
+}
+
+/* Estilos para el header */
+header {
+    position: fixed; /* Header en posición fija */
+    top: 0; /* Alinear al borde superior de la ventana */
+    width: 100%; /* Header ocupa todo el ancho de la pantalla */
+    z-index: 1000; /* Header por encima de otros elementos */
+}
+  
+/* Ajusta el contenido debajo del header para que no quede oculto */
+body {
+    padding-top: 60px;
+}
+
+/* Barra Navegación*/
+
+.navbar{
+    padding: 1 rem;
+    background-color: rgb(221, 246, 246);
+}
+
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+/* Rotación del Logo */
+.navbar-brand img{
+    transition: transform 0.5s linear;
+}
+
+.navbar-brand img:hover{
+    transform: rotate(180deg);
+}
+
+/* Sección Principal*/
+
+.principal{
+    background-color: rgb(207, 231, 252);
+    min-height: 50px;
+    text-align: center;
+}
+
+.principal-primero{
+    padding: 2rem;
+}
+
+.principal-imagen-desarrollador{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+
+/* Centrar el texto del encabezado del carrusel */
+section h6 {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+/* Tarjetas de menu obras disponibles*/
+.experiencia{
+    padding: 40px 40px 60px 40px;
+}
+
+.experiencia .columna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+/* Tarjetas de las obras*/
+.experiencia2{
+    padding: 40px 40px 60px 40px;
+}
+
+.experiencia2 .columna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    padding: 20px;
+}
+
+.experiencia i{
+    font-size: 2rem;
+    color: #b10819;
+    background-color: #ffffff;
+    padding: 8px 19px;
+    border-radius: 80%;
+}
+
+.experiencia-titulo{
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+/* Botones de las obras disponibles */
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.badge-container a {
+    text-decoration: none;
+}
+
+.badge{
+    margin: 5px;
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.badge:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+}
+
+/* Estilos para las imágenes y el overlay */
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-container:hover img {
+    transform: scale(1.25);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.img-container:hover .img-overlay {
+    opacity: 1;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover;
+}
+
+/* FOOTER*/
+
+footer .bi {
+    font-size: 1.5rem; /* Tamaño inicial de los iconos */
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Transición suave para el hover */
+}
+
+footer .bi:hover {
+    transform: scale(1.25);
+    font-size: 2rem;
+}
+
+footer h4 {
+    margin-bottom: 0.1rem;
+}
+
+footer p {
+    margin-top: 0.5rem;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-brand, .navbar-nav .nav-link {
+        text-align: center;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    h6 {
+        font-size: 1.25rem;
+    }
+
+    .principal {
+        padding: 1rem;
+    }
+
+    .principal-primero {
+        text-align: center;
+    }
+
+    .experiencia .columna, .experiencia2 .columna {
+        width: 100%;
+    }
+
+    .experiencia2 .card {
+        width: 100%;
+    }
+
+    .experiencia, .experiencia2 {
+        padding: 20px;
+    }
+
+    .navbar-brand img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Estilos específicos para el modal del carrito */
+.modal-body {
+    padding: 1.5rem; /* Espaciado interno del modal */
+}
+
+/* Estilos para la lista de productos en el carrito */
+#cartItems .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#cartItems .item-title .item-price {
+    margin-right: auto;
+    padding-right: 10px;
+    white-space: nowrap; /* Evita que el título se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#cartItems .remove-item {
+    flex-shrink: 0; /* Evita que el botón se encoja y se desplace */
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+    max-width: 100px; /* Limita el ancho máximo del botón */
+    text-align: center;
+}
+
+/* Formulario */
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}
